@@ -1,0 +1,698 @@
+.bolds{
+    font-weight: bold;
+}
+
+#canvas{
+    min-height: 100vh;
+    background-color: #567685;
+    background-image: url("https://i.pinimg.com/originals/00/17/c0/0017c0178994589053d519a902bc011f.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    overflow: hidden;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: monospace;
+    color: black;
+
+}
+#forumarea{
+    margin-top: 25px;
+    backdrop-filter: blur(5px);
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    gap: 10em;
+    width: 900px;
+    height: 360px;
+    margin: 0 auto;
+    border-radius: 10px;
+    border: solid 1px #777;
+    padding: 30px;
+    overflow-y: auto;
+    max-height: calc(100vh - 40px);
+    overflow-x: hidden;
+
+    &::-webkit-scrollbar {
+        width: 15px;
+    }
+    
+    &::-webkit-scrollbar-thumb {
+        background-color: #a6acc5;
+        border-radius: 30px;
+        height: 5px;
+    }
+    
+    &::-webkit-scrollbar-thumb:hover {
+        background-color: #666; 
+        margin-right: 2px;
+    }
+    
+    &::-webkit-scrollbar-track {
+        background-color: #dcdee5; 
+        border-radius: 30px; 
+    }
+}
+
+
+#postWrapper{
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    flex-grow: 1;
+    align-items: flex-start;
+}
+
+.forumpost{
+    cursor: pointer;
+    background-color: rgba(114, 150, 185, 0.5);
+    margin: 1%;
+    width: 20%;
+    height: 20%;
+    border-radius: 10px;
+    border: solid 1px #777;
+    padding: 1%;
+    word-wrap: break-word;
+    position: relative;
+}
+
+#pageArea{
+    margin: auto;
+    position: relative;
+}
+
+.hero{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    background-position: center;
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+#intro{
+    text-align: center;
+    position: relative;
+    top: 25%; 
+    left: 50%;  
+    transform: translate(-50%, -50%); 
+    z-index: 1;
+}
+
+.form-box {
+    width: 380px;
+    height: 300px;
+    border-radius: 30px;
+    position: absolute;
+    margin: 0 auto;
+    background-color: rgba(115, 135, 155, 0.3);
+    padding: 5px;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+}
+.button-box{
+    top: 5px;
+    display: flex;
+    width: 222.8px;
+    margin: 10px auto;
+    position: relative;
+    box-shadow: 0 0 20px 3px rgba(255, 255, 255, 0.329);
+    border-radius: 30px;
+;
+}
+
+.toggle-btn{
+    padding: 10px 30px;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    outline: none;
+    position: relative;
+} 
+
+#btn{
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 110px;
+    height: 100%;
+    background: linear-gradient(to right, #f49836,#ffad06);
+    border-radius: 30px;
+    transition: .5s;
+}  
+
+.submit-btn{
+    margin: auto;
+    margin-top: 15px;
+    width: 50%;
+    height: 30px;
+    pad: 10px 30px;
+    cursor: pointer;
+    display: block;
+    background-color: #739dc4;
+    border: 0;
+    outline: none;
+    border-radius: 30px;
+}
+
+.submit-btn:hover{
+    background-color:  #2f79c0;
+}
+
+.input-group{
+    top: 120px;
+    position: absolute;
+    width: 280px;
+    transition: .5s;
+}
+
+.input-field{
+    background-color: #5c80c4;
+    width: 100%;
+    padding: 10px 0;
+    margin: 5px 0;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 1px solid #999;
+    outline: none;
+    background: transparent;
+}
+
+#login{
+    left: 50px;
+}
+
+#register{
+    left: 450px;
+}
+
+#firstNameLog,#lastNameLog,#firstNameReg,#lastNameReg {
+    border-radius: 30px;
+    padding: 3px;
+    height: 30px;
+    background-color: #E8F0FE;
+    color: black;
+}
+
+.btn-primary1{
+    margin: auto;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    width: 7%;
+    height: 30px;
+    cursor: pointer;
+    display: block;
+    background: linear-gradient(to right, #f49836,#ffad06);
+    border: 0;
+    outline: none;
+    border-radius: 30px; 
+}
+
+.btn-primary2{
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    width: 10%;
+    height: 30px;
+    cursor: pointer;
+    display: block;
+    background: linear-gradient(to right, #dd882c,#ffad06);
+    border: 0;
+    outline: none;
+    border-radius: 30px; 
+}
+
+.btn-primary1:hover{
+    background-color: rgb(0, 0, 0);
+}
+
+header {
+    right: 0;
+    width:100vw;
+    height:60px;
+    align-items: center;
+    margin-bottom: 30px;
+    position: relative;
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    background-color: rgba(114, 150, 185, 0.5);
+    box-shadow: 0 5px 5px rgba(81, 79, 79, 0.35);
+}
+
+#logo img {
+    margin-left: 15px;
+    height: 70px;
+    width: 70px;
+}
+
+#logoutButton{
+    border: none;
+    margin-top: 5px;
+    height: 20px;
+    width: 70px;
+    margin-right: 15px;
+    background-color: #f06060;
+    border-radius: 30px;
+    padding: 2px 4px;
+    cursor: pointer;
+}
+
+#logoutButton:hover{
+    background-color: #ed3333; 
+}
+
+#postMessage{
+    margin-top: 20px;
+    margin-bottom: 1px;
+    width: 700px;
+    height: 20px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 30px;
+    padding: 7px;
+    background-color: rgba(194, 195, 196, 0.5);
+    backdrop-filter: blur(5px);
+    resize: none;
+}
+
+#update{
+    font-size: x-large;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+}
+
+#update img{
+    width: 200px;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    animation: lds-dual-ring 35s rotate;
+}  
+
+.lds-dual-ring {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+  }
+
+  .lds-dual-ring:after {
+    content: " ";
+    display: block;
+    width: 80px;
+    height: 80px;
+    margin: 8px;
+    border-radius: 50%;
+    border: 6px solid #e98858;
+    border-color: #e98858 transparent #e98858 transparent;
+    animation: lds-dual-ring 1.2s linear infinite;
+  }
+  @keyframes lds-dual-ring {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  .bttn {
+    margin-top: 7px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 6px 6px;
+    cursor: pointer;
+    border-radius: 30px;
+    font-size: 10px;
+}
+
+
+.bttn.delete {
+    width: 30px;
+    background-color: rgba(120, 115, 118, 0.5);
+    position: absolute; 
+    top: 0; 
+    right: 5px; 
+}
+
+.bttn.deleteRep {
+    background-color: rgba(145, 141, 142, 0.5);
+    position: absolute;
+    width: 30px;
+    top: 0;
+    right: 0; 
+    padding: 6px 6px;
+    cursor: pointer;
+    border-radius: 30px;
+    font-size: 10px;
+}
+
+.bttn.delete:hover{
+    background-color: #e74c3c;
+}
+
+.bttn.reply {
+    color: black;
+    margin-top: 20px;
+    height: 25px;
+    width: 100%;
+    background-color: rgba(145, 141, 142, 0.5);
+}
+
+.bttn.reply:hover{
+    background-color:#27ae60;
+}
+
+.user-container {
+    display: flex;
+    align-items: center;
+}
+
+.user-containerRep{
+    display: flex;
+    align-items: center;
+}
+
+#deleteCard {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; 
+    height: 100%;
+    background: rgba(192, 188, 188, 0.6);
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #deleteCardReply {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(192, 188, 188, 0.6);
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #deleteCard .confirmation {
+    background: rgba(114, 150, 185, 2);
+    padding: 20px;
+    border-radius: 30px;
+    text-align: center;
+    align-items: center;
+    max-width: 100%;
+}
+
+#deleteCard .message-content{
+    text-align: left; 
+    margin: 0 auto; 
+    padding: 5px;
+    max-width: 100%;
+}
+
+#deleteCard .deleteSubButton {
+    background-color: rgba(179, 176, 177, 0.5);
+    border-radius: 30px;
+    padding: 5px 5px;
+    cursor: pointer;
+    border: none;
+    margin: 7px;
+}
+
+#deleteCard #deleteButton:hover {
+    background-color: #e74c3c
+}
+#deleteCard #cancelButton:hover {
+    background-color: #5c80c4
+}
+
+#replyCard {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(192, 188, 188, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.replyArea {
+    background: rgba(114, 150, 185, 2);
+    width: 700px;
+    padding: 20px;
+    border-radius: 30px;
+    text-align: left;
+    align-items: center;
+    position: relative;
+    margin: 0 auto;
+}
+
+.exit-button-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.exit-button {
+    top: 0;
+    width: 30px;
+    margin-right: 15px;
+    margin-top: 15px;
+    color: white;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 30px;
+    background: rgba(179, 176, 177, 0.5);
+}
+
+.exit-button:hover{
+    background-color: #e74c3c
+}
+
+#replyTextArea{
+    margin-top: 20px;
+    border-radius: 30px;
+    padding: 10px;
+    height: 15px;
+    border: none;
+    resize: none;
+}
+
+#sendReplyButton{
+    margin-top: 10px;
+    width: 697px;
+    height: 30px;
+    background:rgba(179, 176, 177, 0.5);
+    border-radius: 30px;
+    border: none;
+}
+
+#sendReplyButton:hover{
+    background: #27ae60;
+}
+
+#messageWrapper{
+    border-radius: 30px;
+    background: rgba(227, 226, 224, 0.5);
+    padding: 15px;
+    word-wrap: break-word;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+#messageWrapperRep{
+    border-radius: 30px;
+    background: rgba(227, 226, 224, 0.5);
+    padding: 15px;
+    word-wrap: break-word;
+    margin-right: 15px;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+#loadingSection{
+    overflow-y: auto; 
+    max-height: calc(100vh - 300px); 
+    &::-webkit-scrollbar {
+        width: 15px;
+    }
+    
+    &::-webkit-scrollbar-thumb {
+        background-color: #7f8189;
+        border-radius: 30px;
+        height: 5px;
+        padding: 30px;
+    }
+    
+    &::-webkit-scrollbar-thumb:hover {
+        background-color: #666; 
+        margin-right: 2px;
+    }
+    
+    &::-webkit-scrollbar-track {
+        background-color: #dcdee5; 
+        border-radius: 30px;
+    }
+}
+
+#replyWrapper{
+    border-top-left-radius: 0;
+}
+
+#replyTextArea{
+    width: 680px;
+    margin-right: 30px;
+}
+
+.replySection {
+    margin-top: 10px;
+    border-radius: 30px;
+    background: rgba(159, 197, 219, 0.5);
+    padding: 15px;
+    word-wrap: break-word;
+    position: relative;
+    overflow: hidden; 
+    height: auto; 
+    padding-right: 40px; 
+    margin-right: 15px;
+}
+
+.replySection .bttn.deleteRep {
+    top: 5px; 
+    right: 20px;
+}
+
+.replySection .bttn.deleteRep:hover {
+    background-color: #e74c3c;
+}
+
+#deleteCardReply {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+    max-width: 100%;
+}
+
+#deleteCardReply .confirmationRep {
+    background: rgba(114, 150, 185, 0.85);
+    padding: 20px;
+    border-radius: 30px;
+    text-align: center;
+    align-items: center;
+    max-width: 100%;
+}
+
+#deleteCardReply .replyContent{
+    text-align: left; 
+    margin: 0 auto; 
+    padding: 5px;
+    max-width: 100%;
+}
+
+#deleteCardReply .deleteSubButtonReply {
+    background-color: rgba(179, 176, 177, 0.5);
+    border-radius: 30px;
+    padding: 5px 5px;
+    cursor: pointer;
+    border: none;
+    margin: 7px;
+}
+
+#deleteCardReply #cancelButtonReply:hover {
+    background-color: #5c80c4
+}
+
+#deleteCardReply #deleteButtonReply:hover {
+    background-color: #e74c3c;
+}
+
+.quesButton{
+    margin-top: 25px;
+    margin-left: 45px;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.quesButton:hover{
+    color: teal;
+}
+
+#openingMessage{
+    margin-top: 15px;
+    margin-left: 100px;
+}
+
+#headerMessageWrapper{
+    margin-right: auto;
+    background-color: #E9FDFB;
+    border-radius: 30px;
+    border-top-left-radius: 0;
+    padding: 7px;
+}
+
+#nameSection{
+    text-align: center;
+}
+
+#errorCard {
+    display: none;
+    background-color: #FF5733;
+    color: #FFF;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #D12B00;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+#errorCard2 {
+    display: none;
+    background-color: #FF5733;
+    color: #FFF;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #D12B00;
+    margin: auto;
+    width: 500px;
+    border-radius: 5px;
+    position: fixed;
+    top: 10px;
+    left: 0; 
+    right: 0; 
+    z-index: 1;
+}
+
+
+
+
+  
+  
+
